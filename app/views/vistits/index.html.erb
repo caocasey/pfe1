@@ -1,0 +1,29 @@
+<h1>Listing vistits</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Timeinstore</th>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @vistits.each do |vistit| %>
+      <tr>
+        <td><%= vistit.timeinstore %></td>
+        <td><%= vistit.date %></td>
+        <td><%= link_to 'Show', vistit %></td>
+        <td><%= link_to 'Edit', edit_vistit_path(vistit) %></td>
+        <td><%= link_to 'Destroy', vistit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Vistit', new_vistit_path %>

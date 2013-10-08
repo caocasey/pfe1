@@ -1,0 +1,27 @@
+<h1>Listing entertainements</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Waitingtime</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @entertainements.each do |entertainement| %>
+      <tr>
+        <td><%= entertainement.waitingtime %></td>
+        <td><%= link_to 'Show', entertainement %></td>
+        <td><%= link_to 'Edit', edit_entertainement_path(entertainement) %></td>
+        <td><%= link_to 'Destroy', entertainement, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Entertainement', new_entertainement_path %>

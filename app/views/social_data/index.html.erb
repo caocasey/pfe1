@@ -1,0 +1,29 @@
+<h1>Listing social_data</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Facebooktoken</th>
+      <th>Facebooksecret</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @social_data.each do |social_datum| %>
+      <tr>
+        <td><%= social_datum.facebookToken %></td>
+        <td><%= social_datum.facebookSecret %></td>
+        <td><%= link_to 'Show', social_datum %></td>
+        <td><%= link_to 'Edit', edit_social_datum_path(social_datum) %></td>
+        <td><%= link_to 'Destroy', social_datum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Social datum', new_social_datum_path %>

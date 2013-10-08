@@ -1,0 +1,27 @@
+<h1>Listing cross_sellings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nbr advice item</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cross_sellings.each do |cross_selling| %>
+      <tr>
+        <td><%= cross_selling.nbr_advice_item %></td>
+        <td><%= link_to 'Show', cross_selling %></td>
+        <td><%= link_to 'Edit', edit_cross_selling_path(cross_selling) %></td>
+        <td><%= link_to 'Destroy', cross_selling, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cross selling', new_cross_selling_path %>

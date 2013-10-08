@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Facebooktoken:</strong>
+  <%= @social_datum.facebookToken %>
+</p>
+
+<p>
+  <strong>Facebooksecret:</strong>
+  <%= @social_datum.facebookSecret %>
+</p>
+
+<%= link_to 'Edit', edit_social_datum_path(@social_datum) %> |
+<%= link_to 'Back', social_data_path %>

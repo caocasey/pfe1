@@ -1,0 +1,21 @@
+<%= form_for(@entertainement) do |f| %>
+  <% if @entertainement.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@entertainement.errors.count, "error") %> prohibited this entertainement from being saved:</h2>
+
+      <ul>
+      <% @entertainement.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :waitingtime %><br>
+    <%= f.number_field :waitingtime %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

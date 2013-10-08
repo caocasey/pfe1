@@ -1,0 +1,2 @@
+module GamingsHelper
+end
