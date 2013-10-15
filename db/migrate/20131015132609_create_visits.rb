@@ -1,6 +1,6 @@
-class CreateVistits < ActiveRecord::Migration
+class CreateVisits < ActiveRecord::Migration
   def change
-    create_table :vistits do |t|
+    create_table :visits do |t|
       t.integer :timeinstore
       t.date :date
 

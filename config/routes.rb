@@ -1,4 +1,6 @@
 PFE1::Application.routes.draw do
+  resources :visits
+
   resources :installation_data
 
   resources :social_data
@@ -10,8 +12,6 @@ PFE1::Application.routes.draw do
   resources :entertainements
 
   resources :clothings
-
-  resources :vistits
 
   resources :selections
 
