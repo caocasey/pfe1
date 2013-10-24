@@ -1,4 +1,4 @@
 class Item < ActiveRecord::Base
     belongs_to :store
-    belong_to :selection
+    belongs_to :selection
 end
