@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+  
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
   <title>PFE1</title>
   <a href="/clients">clients</a>
   <a href="/clothings">clothings</a>
@@ -19,12 +27,6 @@
   <a href="/stores">stores</a>
   <a href="/users">users</a>
   <a href="/visits">visits</a>
-  
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
 
 <%= yield %>
 
